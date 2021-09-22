@@ -1,5 +1,6 @@
 #include<stdio.h>
 //2 exercicio de funcao: subtrair 3 numeros
+//Aluno: Yago Rian | Prof: Roberto Novais | 2021
 int fsub(int a, int b, int c);
 int main(void){
 
