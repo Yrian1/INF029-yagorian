@@ -9,7 +9,7 @@ void Cadnome(char* clinome){
 		
 	for(i = 0 ; i < 21 ; i++)
 			clinome[i]='\0';
-		scanf(" %s", clinome);
+		scanf(" %[^\n]s", clinome);
 		valid=validnome(clinome);
 	}while(valid!=1);
 	while((getchar()) != '\n');

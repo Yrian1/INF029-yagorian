@@ -1,8 +1,9 @@
 #include"Library-ATL08.h"
+#include<string.h>
 #include<stdio.h>
 
 int validnome(char* nome){
-	if(nome[20]!='\0'){
+	if(strlen(nome) > 20){
 		puts("Voce inseriu um nome com mais de 20 caracteres por favor insira novamente");
 		return 0;
 	}
@@ -11,16 +12,16 @@ int validnome(char* nome){
 
 int validcpf(char* cpf){
 	int i=0;
-	if(cpf[10]=='\0'){
-		puts("Voce inseriu um cpf invalido por favor insira novamente");
-		return 0;
-	}
 	while(i<11){
 		if(cpf[i]<48 || cpf[i]>57){
 			puts("Voce inseriu um cpf invalido por favor insira novamente");
 			return 0;
 			}
 		i++;
+	}
+	if(i<11){
+		puts("Voce inseriu um cpf invalido por favor insira novamente");
+		return 0;
 	}
 	return 1;
 }
