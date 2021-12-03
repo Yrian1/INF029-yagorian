@@ -346,8 +346,8 @@ int Rlc_Strc(Aux_Vet *arr, int nt){
 	}
 	else{
 		arr->tm+=nt;
-		if(nt<0){
-			arr->index+=nt;
+		if(arr->tm<arr->index){
+			arr->index=arr->tm;
 		}
 		return SUCESSO;
 	}
